@@ -1,13 +1,30 @@
 # FRC Team 6901 Training Repo
 
-This repository contains several projects that should be completed to familiarize yourself with programming for the FIRST Robotics Competition.
+This repository will house several projects that should be completed to familiarize yourself with programming for the FIRST Robotics Competition.
+
+## General Installation/Setup Instructions
+Here are some important things you need to download in order to properly program your robot.
+### Github
+[Create](https://github.com/join) you Github account.
+
+### Git
+[Download](https://git-scm.com/downloads) Git
+
+### WPILib
+Before you can start programming, you need to install the libraries and IDE for FRC. [Here's](https://docs.wpilib.org/en/stable/docs/zero-to-robot/step-2/wpilib-setup.html) a step by step guide.
+
+Additionally, if you own a Windows computer, you can [install other tools](https://docs.wpilib.org/en/stable/docs/zero-to-robot/step-2/frc-game-tools.html) to run code on real robots.
+
+## How to use this repo
+You will fork this repository and keep a local clone of your forked repository. This system will allow you to work on your own code in addition to being able to download new projects that you can work on while practicing your Git skills.
+
+Every time you finish a project, you can push your changes onto Github.
+
+[Here's](https://youtu.be/IauwGUQovb4) a video that outlines this process. NOTE: You will need a good understanding of Git, make sure you look at those resources.
 
 ## Resources
 
 The following are a collection of resources that are helpful with Java and FRC Programming.
-
-### Links
-
 
 ### General Java Resources
 
