@@ -1,6 +1,6 @@
 # Project 3 - Command Based
 
-[Command Based Programming](https://docs.wpilib.org/en/stable/docs/software/examples-tutorials/wpilib-examples.html) is what we'll be implementing throughout the year.
+[Command Based Programming](https://docs.wpilib.org/en/stable/docs/software/commandbased/what-is-command-based.html) is what we'll be implementing throughout the year.
 
 To get practice, you will be implementing the code you wrote in Project 2 and adapting it to Command Based programming. Ideally, you won't have the Xbox Controller or RomiDrivetrain (or much outside of the default code) in your `Robot.java` file but rather in the `RobotContainer.java` file. You will have to read some of the documentation and/or examples below to understand how the new program will differ from the old one.
 
