@@ -19,7 +19,8 @@ import edu.wpi.first.wpilibj.GenericHID.Hand;
 public class Robot extends TimedRobot {
 
   private final RomiDrivetrain mDrivetrain = new RomiDrivetrain();
-
+  private int controllerPort = 0;
+  private final XboxController controller = new XboxController(controllerPort);
   /**
    * This function is run when the robot is first started up and should be used for any
    * initialization code.
@@ -52,7 +53,9 @@ public class Robot extends TimedRobot {
   
   /** This function is called periodically during operator control. HINT you code will be in this function*/
   @Override
-  public void teleopPeriodic() {}
+  public void teleopPeriodic(){
+    mDrivetrain.arcadeDrive(controller.getY(Hand.kLeft), -1 * controller.getX(Hand.kRight));
+  }
 
   /** This function is called once when the robot is disabled. */
   @Override

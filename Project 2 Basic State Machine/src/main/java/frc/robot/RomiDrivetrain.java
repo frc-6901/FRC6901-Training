@@ -57,7 +57,7 @@ public class RomiDrivetrain extends SubsystemBase {
 
   private final DifferentialDriveOdometry mOdometry = new DifferentialDriveOdometry(Rotation2d.fromDegrees(0));
 
-
+  
 
   /** Creates a new RomiDrivetrain. */
   public RomiDrivetrain() {
@@ -68,13 +68,40 @@ public class RomiDrivetrain extends SubsystemBase {
     resetEncoders();
   }
 
+  //Normal Speed of Romi
+  private RomiState state = RomiState.NORMAL;
+
   /**
    * Commands the drivetrain through an arcade drive style. HINT: this is useful for your purposes.
    * @param xaxisSpeed The speed at which the robot goes forward and backward. Should be a number between -1 and 1.
    * @param zaxisRotate The speed at which the spins clockwise and counterclockwise. Should be a number between -1 and 1.
    */
+
+   public enum RomiState {
+     SLOW, NORMAL, FAST
+   }
+
+   public void setState(RomiState state){
+     this.state = state;
+   }
+
   public void arcadeDrive(double xaxisSpeed, double zaxisRotate) {
-    mDiffDrive.arcadeDrive(xaxisSpeed, zaxisRotate);
+    switch (state) {
+      case SLOW:
+      System.out.println("The Romi is in Slow Mode");
+      mDiffDrive.arcadeDrive(xaxisSpeed * 0.5, zaxisRotate * 0.5);
+      break;
+
+      case NORMAL:
+      System.out.println("The Romi is in Normal Mode");
+      mDiffDrive.arcadeDrive(xaxisSpeed * 0.75, zaxisRotate * 0.75);
+      break;
+
+      case FAST:
+      System.out.println("The Romi is in Fast Mode");
+      mDiffDrive.arcadeDrive(xaxisSpeed, zaxisRotate);
+      break;
+    }
   }
 
   public void resetEncoders() {
