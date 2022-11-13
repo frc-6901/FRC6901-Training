@@ -25,12 +25,24 @@ public class RobotContainer {
   private final RomiDrivetrain m_romiDrivetrain = new RomiDrivetrain();
 
   // You will need to set this up.
-  private final SequentialCommandGroup mCommand = new SequentialCommandGroup();
+  private final SequentialCommandGroup mCommand = new SequentialCommandGroup(
+    new InstantCommand(
+      () ->
+      m_romiDrivetrain.setForwardSpeed(0.5), m_romiDrivetrain),
+      new WaitCommand(5),
+
+    new InstantCommand(
+      () ->
+      m_romiDrivetrain.setForwardSpeed(0), m_romiDrivetrain),
+    )
+  );
 
   /** The container for the robot. Contains subsystems, OI devices, and commands. */
   public RobotContainer() {
     // Configure the button bindings
     configureButtonBindings();
+
+
   }
 
   /**
