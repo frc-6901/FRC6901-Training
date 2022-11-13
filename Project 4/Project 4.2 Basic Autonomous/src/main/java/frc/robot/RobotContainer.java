@@ -33,9 +33,7 @@ public class RobotContainer {
 
     new InstantCommand(
       () ->
-      m_romiDrivetrain.setForwardSpeed(0), m_romiDrivetrain),
-    )
-  );
+      m_romiDrivetrain.setForwardSpeed(0), m_romiDrivetrain));
 
   /** The container for the robot. Contains subsystems, OI devices, and commands. */
   public RobotContainer() {
