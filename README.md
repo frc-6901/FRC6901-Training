@@ -11,7 +11,7 @@ Here are some important things you need to download in order to properly program
 [Download](https://git-scm.com/downloads) Git
 
 ### GitHub Desktop
-[Download]([https://git-scm.com/downloads](https://desktop.github.com/)) GitHub Desktop
+[Download](https://desktop.github.com/) GitHub Desktop
 
 ### WPILib
 Before you can start programming, you need to install the libraries and IDE for FRC. [Here's](https://docs.wpilib.org/en/stable/docs/zero-to-robot/step-2/wpilib-setup.html) a step by step guide.
