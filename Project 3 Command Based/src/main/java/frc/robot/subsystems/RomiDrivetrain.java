@@ -25,6 +25,7 @@ public class RomiDrivetrain extends SubsystemBase {
 
   // Set up the differential drive controller
   private final DifferentialDrive m_diffDrive = new DifferentialDrive(m_leftMotor, m_rightMotor);
+  
 
   /** Creates a new RomiDrivetrain. */
   public RomiDrivetrain() {
@@ -34,8 +35,33 @@ public class RomiDrivetrain extends SubsystemBase {
     resetEncoders();
   }
 
+  private RomiState state = RomiState.NORMAL;
+
+  public enum RomiState {
+    SLOW, NORMAL, FAST
+  }
+
+  public void setState(RomiState state) {
+    this.state = state;
+  }
+
   public void arcadeDrive(double xaxisSpeed, double zaxisRotate) {
-    m_diffDrive.arcadeDrive(xaxisSpeed, zaxisRotate);
+    switch (state) {
+      case SLOW:
+      System.out.println("The Romi is in" + state + "  mode");
+      m_diffDrive.arcadeDrive(xaxisSpeed * 0.5, zaxisRotate * 0.5);
+      break;
+
+      case NORMAL:
+      System.out.println("The Romi is in" + state + "  mode");
+      m_diffDrive.arcadeDrive(xaxisSpeed * 0.75, zaxisRotate * 0.75);
+      break;
+
+      case FAST:
+      System.out.println("The Romi is in" + state + "  mode");
+      m_diffDrive.arcadeDrive(xaxisSpeed, zaxisRotate);
+      break;
+    }
   }
 
   public void resetEncoders() {

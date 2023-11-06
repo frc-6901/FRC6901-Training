@@ -24,6 +24,9 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import edu.wpi.first.wpiutil.math.VecBuilder;
 import edu.wpi.first.wpiutil.math.numbers.N2;
 
+import edu.wpi.first.wpilibj.XboxController;
+import edu.wpi.first.wpilibj.GenericHID.Hand;
+
 public class RomiDrivetrain extends SubsystemBase {
 
   // Romi Encoder Constants
@@ -42,6 +45,10 @@ public class RomiDrivetrain extends SubsystemBase {
 
   // Set up the differential drive controller
   private final DifferentialDrive mDiffDrive = new DifferentialDrive(mLeftMotor, mRightMotor);
+
+  // Set up Xbox Controller
+  final int controllerPort = 0;
+  XboxController controller = new XboxController(controllerPort);
 
 
   // SIMULATION STUFF
@@ -70,7 +77,7 @@ public class RomiDrivetrain extends SubsystemBase {
 
   /**
    * Commands the drivetrain through an arcade drive style. HINT: this is useful for your purposes.
-   * @param xaxisSpeed The speed at which the robot goes forward and backward. Should be a number between -1 and 1.
+   * @param xaxisSpeed  The speed at which the robot goes forward and backward. Should be a number between -1 and 1.
    * @param zaxisRotate The speed at which the spins clockwise and counterclockwise. Should be a number between -1 and 1.
    */
   public void arcadeDrive(double xaxisSpeed, double zaxisRotate) {
