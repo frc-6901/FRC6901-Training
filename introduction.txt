@@ -1,2 +1,2 @@
-Name: 
-Fact: 
+Name: Byron lin
+Fact: I am terrible at Java
