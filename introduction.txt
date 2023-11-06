@@ -1,2 +1,2 @@
-Name: 
-Fact: 
+Name: Aadi Patel
+Fact: I like cats,
