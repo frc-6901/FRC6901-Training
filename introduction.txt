@@ -1,2 +1,2 @@
-Name: 
-Fact: 
+Name: Simon Chen
+Fact: I'm a senior
