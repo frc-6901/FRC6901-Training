@@ -1,2 +1,2 @@
-Name: 
-Fact: 
+Name: Cayden Yim
+Fact: I like coding
