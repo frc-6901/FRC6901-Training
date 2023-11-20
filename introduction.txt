@@ -1,2 +1,2 @@
-Name: 
-Fact: 
+Name: Arjun Palaniappan
+Fact: This is my first year doing FRC
